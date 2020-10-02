@@ -5,3 +5,10 @@ index:
 Articles:
     path: /Articles/New
     controller: App\Controller\ArticlesController:index
+
+GetArticles:
+    path: /Articles/Get/{id}
+    controller: App\Controller\ArticlesController:getArticle
+Form:
+    path: /Formulaire/Create
+    controller: App\Controller\FormController:formInit

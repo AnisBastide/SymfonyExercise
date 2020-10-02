@@ -25,6 +25,13 @@ class ArticlesController
         $this->manager->flush();
         return new Response();
     }
+
+    public function getArticle(int $id){
+        /** @var ArticleRepository $articleManager */
+        $articleManager=$this->manager->getRepository(Articles::class);
+        var_dump($articleManager->find($id));
+        return new Response();
+    }
     
     public function __construct(EntityManagerInterface $manager)
     {
